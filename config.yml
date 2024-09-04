@@ -1,0 +1,747 @@
+# AngeloAchievements is a plugin focused on customizing the default Minecraft advancements.
+# I RECOMMEND using the command '/gamerule announceAdvancements false' so that the default messages
+# don't bother you, and you can enjoy only the customized messages from the plugin.
+
+# The function of 'default_message' is to provide a default message that will be shown for all advancements
+# if they do not have a specific configuration under the 'achievements:' section.
+# If an advancement has a specific type configured under 'achievements:', the default message will be ignored
+# for that advancement, and the customized message will be shown instead.
+
+# AngeloAchievements supports MiniMessage, HEX, and RGB colors, allowing you to customize messages with great flexibility.
+
+# Section to customize specific advancements:
+# You can name the entries under 'achievements:' however you like; the name does not affect the plugin's functionality.
+# Make sure to set the advancement type with 'type', followed by its Minecraft path (e.g., minecraft:story/mine_diamond).
+
+# Example configuration for advancements:
+# achievements:
+#   Achievement1:  ⬅ This name is free; you can change it to whatever you want.
+#     type: minecraft:story/mine_diamond  ⬅ The type of advancement you want to customize.
+#     message:  ⬅ The messages that will be sent upon completing this advancement.
+#       - "<blue>You have completed the advancement <yellow>Mine a Diamond&"
+#       - "<green>Congratulations!"
+#   Achievement2:
+#     type: minecraft:adventure/kill_a_mob
+#     message:
+#       - "<gradient:#ff0000:#00ff00>You have completed the achievement First Blood!</gradient>"
+#       - "<red><bold>Incredible!"
+#     title: "You completed an achievement"  ⬅ Title that will appear on the player's screen.
+#     subtitle: "Check the chat"  ⬅ Subtitle that will appear on the player's screen.
+#     hover:  ⬅ Messages that will appear when the player hovers over the chat message.
+#       - "<gray>You killed your first mob!"
+#       - "<gold>Good job!"
+#     commands:  ⬅ Commands that will execute upon completing the achievement. Use '%player%' for the player's name.
+#       - "give %player% diamond 1"
+#       - "[BROCAST] %player% has killed their first mob!" ⬅ Broadcasts a message to all players.
+
+# Default message that will be shown if an achievement does not have a specific configuration.
+default_message: "<green>%player% has earned the achievement %achievements%!"
+achievements:
+
+  1: 
+    type: minecraft:story/mine_stone
+    message:
+      - "<green>You have gained 20¢ for completing that "
+    commands:
+      - "coins give %player% 20"
+  2: 
+    type: minecraft:story/upgrade_tools
+    message:
+      - "<green>You have gained 20¢ for completing that "
+    commands:
+      - "coins give %player% 20"
+  3: 
+    type: minecraft:story/smelt_iron
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30"
+  4: 
+    type: minecraft:story/obtain_armor
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30" 
+  5: 
+    type: minecraft:story/lava_bucket
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30"
+  6: 
+    type: minecraft:story/iron_tools
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30"
+  7: 
+    type: minecraft:story/deflect_arrow
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30"
+  8: 
+    type: minecraft:story/form_obsidian
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30" 
+  9: 
+    type: minecraft:story/mine_diamond
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  10: 
+    type: minecraft:story/enter_the_nether
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"   
+  11: 
+    type: minecraft:story/shiny_gear
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  12: 
+    type: minecraft:story/enchant_item
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  13: 
+    type: minecraft:story/cure_zombie_villager
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  14: 
+    type: minecraft:story/follow_ender_eye
+    message:
+      - "<green>You have gained 200¢ for completing that "
+    commands:
+      - "coins give %player% 200" 
+  15: 
+    type: minecraft:story/enter_the_end
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  16: 
+    type: minecraft:nether/return_to_sender
+    message:
+      - "<green>You have gained 200¢ for completing that "
+    commands:
+      - "coins give %player% 200"
+  17: 
+    type: minecraft:nether/find_bastion
+    message:
+      - "<green>You have gained 300¢ for completing that "
+    commands:
+      - "coins give %player% 300"
+  18: 
+    type: minecraft:nether/obtain_ancient_debris
+    message:
+      - "<green>You have gained 300¢ for completing that "
+    commands:
+      - "coins give %player% 300" 
+  19: 
+    type: minecraft:nether/fast_travel
+    message:
+      - "<green>You have gained 300¢ for completing that "
+    commands:
+      - "coins give %player% 300"
+  20: 
+    type: minecraft:nether/find_fortress
+    message:
+      - "<green>You have gained 250¢ for completing that "
+    commands:
+      - "coins give %player% 250"    
+  21: 
+    type: minecraft:nether/obtain_crying_obsidian
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  22: 
+    type: minecraft:nether/distract_piglin
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  23: 
+    type: minecraft:nether/ride_strider
+    message:
+      - "<green>You have gained 40¢ for completing that "
+    commands:
+      - "coins give %player% 40"
+  24: 
+    type: minecraft:nether/uneasy_alliance
+    message:
+      - "<green>You have gained 350¢ for completing that "
+    commands:
+      - "coins give %player% 350" 
+  25: 
+    type: minecraft:nether/loot_bastion
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  26: 
+    type: minecraft:nether/use_lodestone
+    message:
+      - "<green>You have gained 40¢ for completing that "
+    commands:
+      - "coins give %player% 40"
+  27: 
+    type: minecraft:nether/netherite_armor
+    message:
+      - "<green>You have gained 400¢ for completing that "
+    commands:
+      - "coins give %player% 400"
+      - "[BROCAST] <dark_red>%player% just got a full set of netherite armor!"
+  28: 
+    type: minecraft:nether/get_wither_skull
+    message:
+      - "<green>You have gained 300¢ for completing that "
+    commands:
+      - "coins give %player% 300" 
+  29: 
+    type: minecraft:nether/obtain_blaze_rod
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  30: 
+    type: minecraft:nether/charge_respawn_anchor
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"     
+  31: 
+    type: minecraft:nether/ride_strider_in_overworld_lava
+    message:
+      - "<green>You have gained 150¢ for completing that "
+    commands:
+      - "coins give %player% 150"
+  32: 
+    type: minecraft:nether/explore_nether
+    message:
+      - "<green>You have gained 200¢ for completing that "
+    commands:
+      - "coins give %player% 200"
+  33: 
+    type: minecraft:nether/summon_wither
+    message:
+      - "<green>You have gained 350¢ for completing that "
+    commands:
+      - "coins give %player% 350"
+  34: 
+    type: minecraft:nether/brew_potion
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80" 
+  35: 
+    type: minecraft:nether/create_beacon
+    message:
+      - "<green>You have gained 150¢ for completing that "
+    commands:
+      - "coins give %player% 150"
+  36: 
+    type: minecraft:nether/all_potions
+    message:
+      - "<green>You have gained 800¢ for completing that "
+    commands:
+      - "coins give %player% 800"
+      - "[BROCAST] <gold>%player% has completed the acheivement <green>[A Furious Cocktail]"
+  37: 
+    type: minecraft:nether/create_full_beacon
+    message:
+      - "<green>You have gained 500¢ for completing that "
+    commands:
+      - "coins give %player% 500"
+  38: 
+    type: minecraft:nether/all_effects
+    message:
+      - "<green>You have gained 1000¢ for completing that "
+    commands:
+      - "coins give %player% 1000" 
+      - "[BROCAST] <gold>%player% has completed the acheivement <green>[How Did We Get Here?]"
+  39: 
+    type: minecraft:end/kill_dragon
+    message:
+      - "<green>You have gained 900¢ for completing that "
+    commands:
+      - "coins give %player% 900"
+      - "[BROCAST] <blue><bold>%player% has killed the dragon!"
+  40: 
+    type: minecraft:end/dragon_egg
+    message:
+      - "<green>You have gained 500¢ for completing that "
+    commands:
+      - "coins give %player% 500"     
+  41: 
+    type: minecraft:end/enter_end_gateway
+    message:
+      - "<green>You have gained 250¢ for completing that "
+    commands:
+      - "coins give %player% 250"
+  42: 
+    type: minecraft:end/respawn_dragon
+    message:
+      - "<green>You have gained 550¢ for completing that "
+    commands:
+      - "coins give %player% 550"
+  43: 
+    type: minecraft:end/dragon_breath
+    message:
+      - "<green>You have gained 150¢ for completing that "
+    commands:
+      - "coins give %player% 150"
+  44: 
+    type: minecraft:end/find_end_city
+    message:
+      - "<green>You have gained 300¢ for completing that "
+    commands:
+      - "coins give %player% 300" 
+  45: 
+    type: minecraft:end/elytra
+    message:
+      - "<green>You have gained 500¢ for completing that "
+    commands:
+      - "coins give %player% 500"
+  46: 
+    type: minecraft:end/levitate
+    message:
+      - "<green>You have gained 350¢ for completing that "
+    commands:
+      - "coins give %player% 350"
+  47: 
+    type: minecraft:adventure/voluntary_exile
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  48: 
+    type: minecraft:adventure/spyglass_at_parrot
+    message:
+      - "<green>You have gained 40¢ for completing that "
+    commands:
+      - "coins give %player% 40" 
+  49: 
+    type: minecraft:adventure/kill_a_mob
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30"
+  50: 
+    type: minecraft:adventure/read_power_of_chiseled_bookshelf
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"   
+  51: 
+    type: minecraft:adventure/trade
+    message:
+      - "<green>You have gained 45¢ for completing that "
+    commands:
+      - "coins give %player% 45"
+  52: 
+    type: minecraft:adventure/trim_with_any_armor_pattern
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  53: 
+    type: minecraft:adventure/honey_block_slide
+    message:
+      - "<green>You have gained 70¢ for completing that "
+    commands:
+      - "coins give %player% 70"
+  54: 
+    type: minecraft:adventure/ol_betsy
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50" 
+  55: 
+    type: minecraft:adventure/lightning_rod_with_villager_no_fire
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  56: 
+    type: minecraft:adventure/fall_from_world_height
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  57: 
+    type: minecraft:adventure/salvage_sherd
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  58: 
+    type: minecraft:adventure/avoid_vibration
+    message:
+      - "<green>You have gained 40¢ for completing that "
+    commands:
+      - "coins give %player% 40" 
+  59: 
+    type: minecraft:adventure/sleep_in_bed
+    message:
+      - "<green>You have gained 10¢ for completing that "
+    commands:
+      - "coins give %player% 10"
+  60: 
+    type: minecraft:adventure/hero_of_the_village
+    message:
+      - "<green>You have gained 250¢ for completing that "
+    commands:
+      - "coins give %player% 250"   
+  61: 
+    type: minecraft:adventure/spyglass_at_ghast
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  62: 
+    type: minecraft:adventure/throw_trident
+    message:
+      - "<green>You have gained 90¢ for completing that "
+    commands:
+      - "coins give %player% 90"
+  63: 
+    type: minecraft:adventure/kill_mob_near_sculk_catalyst
+    message:
+      - "<green>You have gained 60¢ for completing that "
+    commands:
+      - "coins give %player% 60"
+  64: 
+    type: minecraft:adventure/shoot_arrow
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30" 
+  65: 
+    type: minecraft:adventure/kill_all_mobs
+    message:
+      - "<green>You have gained 700¢ for completing that "
+    commands:
+      - "coins give %player% 700"
+  66: 
+    type: minecraft:adventure/totem_of_undying
+    message:
+      - "<green>You have gained 150¢ for completing that "
+    commands:
+      - "coins give %player% 150"
+  67: 
+    type: minecraft:adventure/summon_iron_golem
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  68: 
+    type: minecraft:adventure/trade_at_world_height
+    message:
+      - "<green>You have gained 200¢ for completing that "
+    commands:
+      - "coins give %player% 200" 
+  69: #nice
+    type: minecraft:adventure/trim_with_all_exclusive_armor_patterns
+    message:
+      - "<green>You have gained 350¢ for completing that "
+    commands:
+      - "coins give %player% 350"
+  70: 
+    type: minecraft:adventure/two_birds_one_arrow
+    message:
+      - "<green>You have gained 350¢ for completing that "
+    commands:
+      - "coins give %player% 350"     
+  71: 
+    type: minecraft:adventure/whos_the_pillager_now
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  72: 
+    type: minecraft:adventure/arbalistic
+    message:
+      - "<green>You have gained 350¢ for completing that "
+    commands:
+      - "coins give %player% 350"
+  73: 
+    type: minecraft:adventure/craft_decorated_pot_using_only_sherds
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  74: #not sure it works with custom world gen
+    type: minecraft:adventure/adventuring_time
+    message:
+      - "<green>You have gained 600¢ for completing that "
+    commands:
+      - "coins give %player% 600" 
+  75: 
+    type: minecraft:adventure/play_jukebox_in_meadows
+    message:
+      - "<green>You have gained 70¢ for completing that "
+    commands:
+      - "coins give %player% 70"
+  76: 
+    type: minecraft:adventure/walk_on_powder_snow_with_leather_boots
+    message:
+      - "<green>You have gained 70¢ for completing that "
+    commands:
+      - "coins give %player% 70"
+  77: 
+    type: minecraft:adventure/spyglass_at_dragon
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  78: 
+    type: minecraft:adventure/very_very_frightening
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80" 
+  79: 
+    type: minecraft:adventure/sniper_duel
+    message:
+      - "<green>You have gained 150¢ for completing that "
+    commands:
+      - "coins give %player% 150"
+  80: 
+    type: minecraft:adventure/bullseye
+    message:
+      - "<green>You have gained 250¢ for completing that "
+    commands:
+      - "coins give %player% 250"     
+  81: 
+    type: minecraft:adventure/brush_armadillo
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  82: 
+    type: minecraft:adventure/minecraft_trials_edition
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  83: 
+    type: minecraft:adventure/crafters_crafting_crafters
+    message:
+      - "<green>You have gained 70¢ for completing that "
+    commands:
+      - "coins give %player% 70"
+  84: 
+    type: minecraft:adventure/lighten_up
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50" 
+  85: 
+    type: minecraft:adventure/who_needs_rockets
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  86: 
+    type: minecraft:adventure/under_lock_and_key
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  87: 
+    type: minecraft:adventure/revaulting
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  88: 
+    type: minecraft:adventure/blowback
+    message:
+      - "<green>You have gained 150¢ for completing that "
+    commands:
+      - "coins give %player% 150" 
+  89: 
+    type: minecraft:adventure/overoverkill
+    message:
+      - "<green>You have gained 350¢ for completing that "
+    commands:
+      - "coins give %player% 350"
+  90: 
+    type: minecraft:husbandry/safely_harvest_honey
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"     
+  91: 
+    type: minecraft:husbandry/breed_an_animal
+    message:
+      - "<green>You have gained 60¢ for completing that "
+    commands:
+      - "coins give %player% 60"
+  92: 
+    type: minecraft:husbandry/allay_deliver_item_to_player
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  93: 
+    type: minecraft:husbandry/ride_a_boat_with_a_goat
+    message:
+      - "<green>You have gained 70¢ for completing that "
+    commands:
+      - "coins give %player% 70"
+  94: 
+    type: minecraft:husbandry/tame_an_animal
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50" 
+  95: 
+    type: minecraft:husbandry/make_a_sign_glow
+    message:
+      - "<green>You have gained 30¢ for completing that "
+    commands:
+      - "coins give %player% 30"
+  96: 
+    type: minecraft:husbandry/fishy_business
+    message:
+      - "<green>You have gained 40¢ for completing that "
+    commands:
+      - "coins give %player% 40"
+  97: 
+    type: minecraft:husbandry/silk_touch_nest
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  98: 
+    type: minecraft:husbandry/tadpole_in_a_bucket
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50" 
+  99: 
+    type: minecraft:husbandry/obtain_sniffer_egg
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  100: 
+    type: minecraft:husbandry/plant_seed
+    message:
+      - "<green>You have gained 40¢ for completing that "
+    commands:
+      - "coins give %player% 40"     
+  101: 
+    type: minecraft:husbandry/wax_on
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  102: 
+    type: minecraft:husbandry/bred_all_animals
+    message:
+      - "<green>You have gained 600¢ for completing that "
+    commands:
+      - "coins give %player% 600"
+  103: 
+    type: minecraft:husbandry/allay_deliver_cake_to_note_block
+    message:
+      - "<green>You have gained 150¢ for completing that "
+    commands:
+      - "coins give %player% 150"
+  104: 
+    type: minecraft:husbandry/complete_catalogue
+    message:
+      - "<green>You have gained 550¢ for completing that "
+    commands:
+      - "coins give %player% 550" 
+  105: 
+    type: minecraft:husbandry/tactical_fishing
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  106: 
+    type: minecraft:husbandry/leash_all_frog_variants
+    message:
+      - "<green>You have gained 300¢ for completing that "
+    commands:
+      - "coins give %player% 300"
+  107: 
+    type: minecraft:husbandry/feed_snifflet
+    message:
+      - "<green>You have gained 200¢ for completing that "
+    commands:
+      - "coins give %player% 200"
+  108: 
+    type: minecraft:husbandry/balanced_diet
+    message:
+      - "<green>You have gained 600¢ for completing that "
+    commands:
+      - "coins give %player% 600" 
+  109: 
+    type: minecraft:husbandry/obtain_netherite_hoe
+    message:
+      - "<green>You have gained 350¢ for completing that "
+    commands:
+      - "coins give %player% 350"
+  120: 
+    type: minecraft:husbandry/wax_off
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"     
+  121: 
+    type: minecraft:husbandry/axolotl_in_a_bucket
+    message:
+      - "<green>You have gained 50¢ for completing that "
+    commands:
+      - "coins give %player% 50"
+  122: 
+    type: minecraft:husbandry/froglights
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  123: 
+    type: minecraft:husbandry/plant_any_sniffer_seed
+    message:
+      - "<green>You have gained 100¢ for completing that "
+    commands:
+      - "coins give %player% 100"
+  124: 
+    type: minecraft:husbandry/kill_axolotl_target
+    message:
+      - "<green>You have gained 120¢ for completing that "
+    commands:
+      - "coins give %player% 120" 
+  125: 
+    type: minecraft:husbandry/repair_wolf_armor
+    message:
+      - "<green>You have gained 80¢ for completing that "
+    commands:
+      - "coins give %player% 80"
+  126: 
+    type: minecraft:husbandry/whole_pack
+    message:
+      - "<green>You have gained 140¢ for completing that "
+    commands:
+      - "coins give %player% 140"
+  127: 
+    type: minecraft:husbandry/remove_wolf_armor
+    message:
+      - "<green>You have gained 40¢ for completing that "
+    commands:
+      - "coins give %player% 40"
+#apparently there are 129 acheivements so I missed 2
